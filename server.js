@@ -10,4 +10,4 @@ app.use('/', home);
 
 const PORT = process.env.PORT || 5000;
 
-ioServer.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+ioServer.listen(PORT, '0.0.0.0', () => console.log(`Server listening on port ${PORT}`));
