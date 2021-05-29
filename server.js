@@ -9,7 +9,7 @@ const ioServer = require('./src/socket')(app);
 app.use(cors());
 app.use('/', home);
 
-const peerServer = PeerServer({ port: 443, path: '/' });
+const peerServer = PeerServer({ port: 443, path: '/peer' });
 
 const PORT = process.env.PORT || 5000;
 
