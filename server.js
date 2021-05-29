@@ -9,8 +9,6 @@ const ioServer = require('./src/socket')(app);
 app.use(cors());
 app.use('/', home);
 
-const peerServer = PeerServer({ port: 5000, path: '/peer' });
-
 const PORT = process.env.PORT || 5000;
 
 ioServer.listen(PORT, '0.0.0.0', () => console.log(`Server listening on port ${PORT}`));
