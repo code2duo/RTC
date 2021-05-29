@@ -1,4 +1,6 @@
-
+/*
+ * Wrapper for all socket.io events
+ */
 const ioEvents = function (io) {
     io.on('connection', (socket) => {
         socket.on('join-room', (roomId, userId) => {
@@ -15,7 +17,7 @@ const ioEvents = function (io) {
 /*
  * Initialize Socket.io
  */
-const init = function (app) {
+const init = (app) => {
     const server = require('http').createServer(app);
     const io = require('socket.io')(server, {
         cors: {
