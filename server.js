@@ -1,6 +1,5 @@
 const app = require('express')();
 const cors = require('cors');
-const { PeerServer } = require('peer');
 
 // routes
 const home = require('./src/routes');
